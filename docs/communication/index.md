@@ -144,3 +144,9 @@ While this screen is active:
 - no controls on the remote can be used until the emergency stop is disabled again.
 
 This functionality is currently only implemented on the remote controller side and not yet on the bicycle itself.
+
+
+# Total communication diagram of the bicycle
+This is a complete diagram of how the bike communicates and is built, it shows voltage lines, communication between the controller and the different PCB's of our system. 
+
+![Block-diagram-bicycle](diagram-communication.png) <sub> *Figure 1: Block diagram of bicycle communication* </sub> 
