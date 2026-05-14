@@ -21,8 +21,8 @@ Keeping a bicycle upright without a rider is a classic control engineering probl
 - **Plan B (Drone motors):** Two BLDC drone motors with propellers mounted on a rod in the seat post. By varying thrust on each side, a corrective lateral force is generated. This worked.
 
 Two control strategies were tested:
-- **PID controller** — briefly stable but failed due to motor inertia and derivative noise.
-- **LQR controller** — final solution. Uses state-space control to compute optimal corrections based on lean angle and angular rate. Achieved stable balancing within ±1° of target angle.
+- **PID controller** briefly stable but failed due to motor inertia and derivative noise.
+- **LQR controller** final solution. Uses state-space control to compute optimal corrections based on lean angle and angular rate. Achieved stable balancing within ±1° of target angle.
 
 ### 2. Drive
 Both groups used hub motors in the rear wheel to propel the bike.
