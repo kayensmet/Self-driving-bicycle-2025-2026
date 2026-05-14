@@ -8,7 +8,7 @@ Before operating the self-driving bicycle, please follow this exact sequence to 
 *   **Main Battery (Drive System):** First, check if the main battery is on. You can find it under the white wingflaps. Look for the **red button**, which indicates the on/off state. This provides power to the wheel and the drive board (with the ESP).
 *   **LiPo Battery (Balancing System):** To power the balancing system, locate the LiPo battery mounted under the wooden white wingflaps. Take its **yellow connector** and plug it into the matching yellow connector located around the seat pole. 
     *   *Note:* This supplies power to both propellers and, via a buck converter, powers the steering PCB. For more details on how the ESCs, propellers, IMU, and the balancing board interact, see the [Balancing](src/balance) documentation.
-
+Side note: Make sure the batteries are charged as well ;) 
 ## 2. Controller Setup
 
 The remote controller does not run on internal batteries. **You must plug a power bank into the controller** to power it on. 
