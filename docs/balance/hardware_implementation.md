@@ -7,7 +7,20 @@ The board can be physically removed as a unit. As long as the wiring harness is 
 
 ---
 
-## PCB Layout
+## Bill of Materials
+
+Components mounted on the bicycle:
+
+| Component | Link | Qty | Unit price | Total |
+|---|---|---|---|---|
+| Motor — EMAX Pro Series 2814 | [droneshop.nl](https://droneshop.nl/emax-pro-series-2814-motor) | 2 | €35,95 | €71,90 |
+| Propellor — Gemfan 1050 3-blade | [droneshop.nl](https://droneshop.nl/gemfan-1050-3-blade-glass-fiber-nylon-propellers) | 3 | €9,95 | €29,85 |
+| ESC — Sequre 28120 120A AM32 | [droneshop.nl](https://droneshop.nl/sequre-28120-120a-esc-am32) | 2 | €59,95 | €119,90 |
+| LiPo — Dogcom 21700 20000mAh 6S4P | [droneshop.nl](https://droneshop.nl/dogcom-21700-20000mah-6s4p-22-2v-lion-xt90) | 1 | €149,00 | €149,00 |
+| **Total** | | | | **€370,65** |
+
+
+## Perfboard Layout
 
 ![Perfboard overzicht](hardware_implementation.png)
 
@@ -47,7 +60,7 @@ Both IMUs are connected to the ESP32 over the same I²C bus. To avoid address co
 
 ## ESC Signal Wiring
 
-Motor signals are sent from the ESP32 to the ESCs using **DSHOT** (digital protocol — no calibration needed, no analog noise).
+Motor signals are sent from the ESP32 to the ESCs using **DSHOT** (digital protocol, no calibration needed, no analog noise (see DSHOT library) ).
 
 | GPIO | Signal | ESC / Motor |
 |---|---|---|
@@ -72,6 +85,5 @@ Both IMUs share these two lines.
 
 ## Notes for future teams
 
-- The board is modular — it can be removed and reinstalled without resoldering anything.
+- The board is modular, it can be removed or moved.
 - IMU 2 is already wired and has a unique I²C address. Adding it to the software only requires initializing it at `0x69`.
-- If you replace an IMU, make sure to wire the AD0 pin correctly to preserve the address assignment in the table above.
