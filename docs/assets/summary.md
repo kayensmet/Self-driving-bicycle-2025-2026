@@ -6,6 +6,7 @@
 **Group 1:** Robin, Quinten, Maxime, Lars, Noah, Lee  
 **Group 2:** Milan, Kayen, Thibaut, Toon, Simon V, Simon VK
 
+The bicycle discussed in this repo is group 2's bicycle!
 ---
 
 ## What is this project?
@@ -43,8 +44,6 @@ The front wheel steering was actuated by a servo motor.
 ---
 
 ## Communication
-
-- **Group 1** built a custom handheld controller using a PS5 DualSense over Bluetooth → ESP32 base station → ESP-NOW to the bike. Data was also published via MQTT and visualized on a live dashboard.
 - **Group 2** built a custom physical controller (ESP32, linear slider potentiometers, TFT screen, buzzer) communicating via ESP-NOW with a heartbeat safety signal.
 
 ---
