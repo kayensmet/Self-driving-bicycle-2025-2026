@@ -132,17 +132,6 @@ The current LQR uses fixed gains regardless of riding speed. At higher speeds th
 **Obstacle avoidance integration**  
 Currently the bike has no autonomy and is fully remote-controlled. Future work could let the balance system lean the bike slightly sideways to dodge obstacles at an angle — similar to how a cyclist swerves, rather than relying only on steering or hard braking.
 
----
 
-## Files & links
-
-| What | Where |
-|---|---|
-| PID source code | `src/balance/pid/` |
-| LQR source code | `src/balance/lqr/` |
-| Tuning dashboard | `src/balance/dashboard/` |
-| Final presentation (all calculations) | `docs/assets/FinalIB3.pdf` |
-
----
 
 *IB3 — KU Leuven Campus Gent — 2025–2026*
