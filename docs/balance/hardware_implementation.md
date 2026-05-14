@@ -22,7 +22,7 @@ Components mounted on the bicycle:
 
 ## Perfboard Layout
 
-![Perfboard overzicht](hardware_implementation.png)
+![Perfboard overzicht](hardware_implementation.png) 
 
 The board is a perfboard with the following components mounted on pin headers (making them swappable if needed):
 
@@ -60,7 +60,16 @@ Both IMUs are connected to the ESP32 over the same I²C bus. To avoid address co
 
 ## ESC Signal Wiring
 
-Motor signals are sent from the ESP32 to the ESCs using **DSHOT** (digital protocol, no calibration needed, no analog noise (see DSHOT library) ).
+
+Motor signals are sent from the ESP32 to the ESCs using **DSHOT** (digital protocol, no calibration needed, no analog noise). (DSHOT library!)
+> **Note on DSHOT configuration**
+> Currently, **unidirectional DSHOT** is used. The ESC sends no feedback to the ESP32 which means the motor commands go out and nothing comes back.
+>
+> The ESCs do support telemetry (the **T** pin on the signal connector (figure 2), which would allow bidirectional DSHOT: RPM, temperature, and current readback per motor. This is not yet implemented. Adding it would require:
+> - Wiring the telemetry pin of each ESC to a free UART RX pin on the ESP32
+> - Switching to bidirectional DSHOT in the firmware
+>
+> This would be useful for closed-loop RPM control and motor health monitoring. See [What's missing](index.md#whats-missing).
 
 | GPIO | Signal | ESC / Motor |
 |---|---|---|
@@ -69,6 +78,8 @@ Motor signals are sent from the ESP32 to the ESCs using **DSHOT** (digital proto
 
 Each signal wire is paired with a GND wire (black). These are connected via the male pin headers on the board.
 
+
+![ESC wiring diagram](wiring_esc.png) 
 
 ---
 
@@ -87,3 +98,4 @@ Both IMUs share these two lines.
 
 - The board is modular, it can be removed or moved.
 - IMU 2 is already wired and has a unique I²C address. Adding it to the software only requires initializing it at `0x69`.
+
