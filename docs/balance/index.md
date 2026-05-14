@@ -124,7 +124,8 @@ The live tuning dashboad is hosted by the ESP32 itself, after tuning it was take
 These are the open problems specifically for the balance system that the next team should focus on:
 
 **Cornering stability**  
-When the bike turns, the center of gravity needs to shift inward to correctly take a corner — just like a human cyclist leans into a bend. Currently there is no coupling between the balance system and the steering system. A proper implementation would have the balance controller intentionally tilt the bike during a turn, taking the apex smoothly rather than fighting to stay upright against the centrifugal force.
+When the bike turns, the center of gravity needs to shift inward to correctly take a corner, just like a person would take the apex. Currently there is no coupling between the balance system and the steering system. A proper implementation would have the balance controller intentionally tilt the bike during a turn, taking the apex smoothly rather than fighting to stay upright against the centrifugal force.
+This could be done by making the control loop way more stable, more accurate (use both IMU's, use RPM feedback with telemetry of ESC's --> currently not in use)
 
 **Gain scheduled LQR**  
 The current LQR uses fixed gains regardless of riding speed. At higher speeds the bike's dynamics change significantly. it becomes more self-stable and needs less aggressive correction. Wheel speed data from the Hall sensors (already available on the hardware) could be used to schedule different K values depending on velocity.
