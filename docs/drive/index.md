@@ -104,15 +104,6 @@ Although it is not currently used in software, the sensor is already connected t
 
 ---
 
-## Motor Control Connections
-
-The throttle and brake signals for the motor controller are connected to the ESP32 as follows:
-
-- `D25` → Throttle
-- `D26` → Brake
-
----
-
 ## Additional Features
 
 ### Buzzer with Integrated LED
