@@ -33,7 +33,7 @@ If you are a new team member picking this up next year:
 3. Find the relevant source code in `src/`
 4. Check the "What's missing" section on each page, and (hopefully) improve!
 
-5. ## How to start the bike
+## How to start the bike
 [How-to-start (click here)](assets/how-to-start.md).
 
 
