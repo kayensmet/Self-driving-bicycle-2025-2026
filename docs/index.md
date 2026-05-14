@@ -18,11 +18,10 @@ All code is organized in the `src/` folder at the root of this repository:
 
 | Folder | Description |
 |---|---|
-|[Balance](src/balance) | PID controller, LQR controller, tuning dashboard |
-| `src/steering/` | Servo control logic |
-| `src/drive/` | Motor controller integration |
-| `src/communication/` | ESP-NOW, base station, controller firmware |
-
+| [Balance](src/balance) | PID controller, LQR controller, tuning dashboard |
+| [Steering](src/steering) | Servo control logic |
+| [Drive](src/drive) | Motor controller integration |
+| [Communication](src/communication) | ESP-NOW, base station, controller firmware |
 
 ---
 
