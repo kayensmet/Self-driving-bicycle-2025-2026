@@ -18,11 +18,10 @@ All code is organized in the `src/` folder at the root of this repository:
 
 | Folder | Description |
 |---|---|
-| [Balance](src/balance) | PID controller, LQR controller, tuning dashboard |
-| [Steering](src/steering) | Servo control logic |
-| [Drive](src/drive) | Motor controller integration |
-| [Communication](src/communication) | ESP-NOW, base station, controller firmware |
-
+| [Balance](https://github.com/kayensmet/Self-driving-bicycle-2025-2026/tree/main/src/balance) | PID controller, LQR controller, tuning dashboard |
+| [Steering](https://github.com/kayensmet/Self-driving-bicycle-2025-2026/tree/main/src/steering) | Servo control logic |
+| [Drive](https://github.com/kayensmet/Self-driving-bicycle-2025-2026/tree/main/src/drive) | Motor controller integration |
+| [Communication](https://github.com/kayensmet/Self-driving-bicycle-2025-2026/tree/main/src/communication) | ESP-NOW, base station, controller firmware |
 ---
 
 ## How to use this repo
