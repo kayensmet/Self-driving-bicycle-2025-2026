@@ -1,4 +1,4 @@
-# IB3 Self-Driving Bicycle — Project Summary 2025–2026: Summary of FINALIB3.PDF!
+# IB3 Self-Driving Bicycle — Project Summary 2025–2026: Summary of FinalIb3.pdf (english)
 
 
 
