@@ -13,16 +13,16 @@ Each section below has its own page explaining the approach, what worked, what d
 | [Drive](drive/index.md) | Hub motor, motor controller, throttle|
 | [Communication](communication/index.md) | ESP-NOW, MQTT, controller |
 
-### Source code
-All code is organized in the `src/` folder at the root of this repository:
+## Source Code
 
-| Folder | Description |
-|---|---|
-| [Balance](https://github.com/kayensmet/Self-driving-bicycle-2025-2026/tree/main/src/balance) | PID controller, LQR controller, tuning dashboard |
-| [Steering](https://github.com/kayensmet/Self-driving-bicycle-2025-2026/tree/main/src/steering) | Servo control logic |
-| [Drive](https://github.com/kayensmet/Self-driving-bicycle-2025-2026/tree/main/src/drive) | Motor controller integration |
-| [Communication](https://github.com/kayensmet/Self-driving-bicycle-2025-2026/tree/main/src/communication) | ESP-NOW, base station, controller firmware |
----
+All source code is organized inside the `src/` directory at the root of this repository.
+
+| Subsystem | Description | Source |
+| :--- | :--- | :--- |
+| **Balance** | PID controller, LQR controller, tuning dashboard | [Open folder](https://github.com/kayensmet/Self-driving-bicycle-2025-2026/tree/main/src/balance) |
+| **Steering** | Servo control logic and steering actuation | [Open folder](https://github.com/kayensmet/Self-driving-bicycle-2025-2026/tree/main/src/steering) |
+| **Drive** | Hub motor integration, throttle control, motor controller | [Open folder](https://github.com/kayensmet/Self-driving-bicycle-2025-2026/tree/main/src/drive) |
+| **Communication** | ESP-NOW communication, base station, controller firmware | [Open folder](https://github.com/kayensmet/Self-driving-bicycle-2025-2026/tree/main/src/communication) |
 
 ## How to use this repo
 
