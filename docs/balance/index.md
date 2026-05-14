@@ -33,7 +33,7 @@ After detailed calculations (see presentation, slides 10–12), both a solid dis
 
 ---
 
-## Plan B — Drone motors ✅
+## Plan B Drone motors 
 
 The second approach uses **two BLDC drone motors mounted on a rod in the seat post**, each with a propeller. By varying the thrust of each motor, a lateral corrective force is generated at a high moment arm — enough to counteract the bike's lean.
 
@@ -76,7 +76,7 @@ The PID source code can be found in `src/balance/pid/`.
 
 ## LQR controller
 
-After PID proved insufficient, an **LQR (Linear Quadratic Regulator)** was implemented using the `AutoLQR` library. This was the final and best-performing control strategy.
+After PID proved insufficient, an **LQR (Linear Quadratic Regulator)** was implemented using the `AutoLQR` library. This was the final and best-performing control strategy. [(Library)](https://github.com/lily-osp/AutoLQR)
 
 ### How it works
 
@@ -90,7 +90,7 @@ The state vector is: `x = [angle error, rate error]`
 - Angle error = target angle − current pitch
 - Rate error = 0 − gyro rate
 
-The `AutoLQR` library takes a simplified system model and three tuning parameters, then automatically solves the Riccati equation to find the optimal K. This makes it far more robust than PID — especially when the system has lag and physical inertia like ours does.
+The `AutoLQR` library takes a simplified system model and three tuning parameters, then automatically solves the Riccati equation to find the optimal K. This makes it far more robust than PID.
 
 ### Tuning parameters
 
@@ -105,17 +105,16 @@ The `AutoLQR` library takes a simplified system model and three tuning parameter
 ### Final settings (Group 2)
 
 - Target angle: −1.1°
-- Q angle: 10 / Q rate: 1 / R control: 0.1
+- Q angle: 30 / Q rate: 1.5 / R control: 0.1
 - Model damping: 0.98 / Control scale: 35
-- Motor base: 100 / Motor trim: 0
-- **Resulting gain: K = [9.55, 3.68]**
+- Motor base: 240 / Motor trim: 0
 
 ### Result
 
 The LQR controller achieved **stable balancing**: lean angle held within ±1° of target, angular velocity damped quickly, and controller output remained smooth and consistent. This was a significant improvement over PID.
 
 All LQR source code and tuning files are in `src/balance/lqr/`.  
-The live tuning dashboard (used to adjust parameters in real time and monitor sensor output) is in `src/balance/dashboard/`.
+The live tuning dashboad is hosted by the ESP32 itself, after tuning it was taken off to take advantage of pure mathematical performance of the esp responsible for balancing the bicycle. 
 
 ---
 
@@ -127,13 +126,10 @@ These are the open problems specifically for the balance system that the next te
 When the bike turns, the center of gravity needs to shift inward to correctly take a corner — just like a human cyclist leans into a bend. Currently there is no coupling between the balance system and the steering system. A proper implementation would have the balance controller intentionally tilt the bike during a turn, taking the apex smoothly rather than fighting to stay upright against the centrifugal force.
 
 **Gain scheduled LQR**  
-The current LQR uses fixed gains regardless of riding speed. At higher speeds the bike's dynamics change significantly — it becomes more self-stable and needs less aggressive correction. Wheel speed data from the Hall sensors (already available on the hardware) could be used to schedule different K values depending on velocity.
+The current LQR uses fixed gains regardless of riding speed. At higher speeds the bike's dynamics change significantly. it becomes more self-stable and needs less aggressive correction. Wheel speed data from the Hall sensors (already available on the hardware) could be used to schedule different K values depending on velocity.
 
 **Obstacle avoidance integration**  
-Currently the bike has no autonomy and is fully remote-controlled. Future work could let the balance system lean the bike slightly sideways to dodge obstacles at an angle — similar to how a cyclist swerves — rather than relying only on steering or hard braking.
-
-**Low-speed and stationary balancing**  
-The bike cannot currently balance while stationary or at very low speed. Implementing a stationary balance mode — for example using small steering corrections to stay upright (like a human track stand) — would make the system far more complete.
+Currently the bike has no autonomy and is fully remote-controlled. Future work could let the balance system lean the bike slightly sideways to dodge obstacles at an angle — similar to how a cyclist swerves, rather than relying only on steering or hard braking.
 
 ---
 
