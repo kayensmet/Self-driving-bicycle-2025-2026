@@ -141,7 +141,6 @@ Currently the bike has no autonomy and is fully remote-controlled. Future work c
 | LQR source code | `src/balance/lqr/` |
 | Tuning dashboard | `src/balance/dashboard/` |
 | Final presentation (all calculations) | `docs/assets/FinalIB3.pdf` |
-| Heavy files (CAD, videos, raw data) | [Google Drive](https://drive.google.com/your-link-here) *(update this link)* |
 
 ---
 
