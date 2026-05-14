@@ -71,6 +71,80 @@ To enable reverse driving, additional hardware is required which has not yet bee
 
 ---
 
+# PCB and ESP32 Control System
+
+A stripboard PCB was used for controlling the following components:
+
+- Buzzer
+- Brake
+- Throttle
+- Front light
+- Rear light
+- Hall sensor
+
+These components are controlled by an **ESP32** which communicates with the main controller using **ESP-NOW**.
+
+---
+
+## Power Supply
+
+The ESP32 is powered through a **buck converter** that converts the **22V balance system supply** to **7.4V**.
+
+This 7.4V output is connected to the **VIN pin** of the ESP32.
+
+---
+
+## Hall Sensor
+
+A hall sensor is included in the system to measure the bicycle speed in future implementations.
+
+Although it is not currently used in software, the sensor is already connected to:
+
+- `D14` → Hall sensor
+
+---
+
+## Motor Control Connections
+
+The throttle and brake signals for the motor controller are connected to the ESP32 as follows:
+
+- `D25` → Throttle
+- `D26` → Brake
+
+---
+
+## Additional Features
+
+### Buzzer with Integrated LED
+
+A buzzer with an integrated LED is connected to:
+
+- `D27` → Buzzer + LED
+
+---
+
+### Front Light
+
+The front bicycle light is connected to:
+
+- `D32` → Front light
+
+The light automatically turns on when:
+- the system power is enabled, and
+- a connection with the controller is established.
+
+---
+
+### Rear Light
+
+The rear light is connected to:
+
+- `D33` → Rear light
+
+The rear light turns on whenever the brake is activated from the controller.
+
+---
+
 # Conclusion and Recommendations
 
 For future iterations, it is strongly recommended to use **torque arms** to prevent axle spin.
