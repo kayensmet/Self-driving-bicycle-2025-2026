@@ -48,6 +48,8 @@ The second approach uses two BLDC drone motors mounted on a rod in the seat post
 
 **Dimensioning result:** at 32 kg total bike mass, a center of gravity at 0.75 m, and a maximum tilt of 10°, each motor needs to deliver approximately 1.4 kg equivalent thrust. Full calculations are in the presentation (slides 19).
 
+
+For hardware details (Perfboard layout, IMU wiring, ESC connections, bill of materials), see [Hardware Implementation](hardware_implementation.md).
 ---
 
 ## Sensors
