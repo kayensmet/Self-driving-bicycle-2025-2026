@@ -25,7 +25,7 @@ The goal is a bicycle that stays upright and moves without any physical human as
 
 ---
 
-## Plan A — Flywheel
+## Plan A Flywheel
 
 The first approach was a flywheel mounted on the bike frame (idea originated from: [Youtube Video](https://www.youtube.com/watch?v=2Z67NkvXIF4). The idea: spinning a heavy disc and varying its speed creates a gyroscopic reaction torque that counteracts the bike's lean angle.
 
@@ -44,7 +44,7 @@ The second approach uses two BLDC drone motors mounted on a rod in the seat post
 
 **Downsides to be aware of:**
 - Non-linear relationship between motor RPM and thrust (fluid dynamics)
-- Safety risk from spinning propellers — a protective cage was 3D-printed around them (see presentation)
+- Safety risk from spinning propellers: protective cage has been 3D-printed around them (see presentation)
 
 **Dimensioning result:** at 32 kg total bike mass, a center of gravity at 0.75 m, and a maximum tilt of 10°, each motor needs to deliver approximately 1.4 kg equivalent thrust. Full calculations are in the presentation (slides 19).
 
@@ -55,12 +55,13 @@ The second approach uses two BLDC drone motors mounted on a rod in the seat post
 The **MPU6050** IMU (gyroscope + accelerometer) was used to measure the lean angle of the bike.
 
 Two setups were tested:
-- Averaging two MPU6050s: σ = 0.161° — usable but noisy
-- Kalman filter: σ = 0.020° — much cleaner but introduced too much delay
+- Averaging two MPU6050s: σ = 0.161° :usable but noisy
+- Kalman filter: σ = 0.020° :much cleaner but introduced too much delay
 
-The final implementation used a **complementary filter** as a compromise between noise and latency. The sensor was also moved from a loose wooden board to custom brackets directly on the frame to reduce vibration interference.
+We initially tested a dual MPU6050 setup out of curiosity, as we were facing challenges with our PID tuning. During these exploratory tests, we did not implement averaging or Kalman filtering. Ultimately, we opted for a simpler approach: using a single MPU6050 alongside a basic complementary filter that combined a proportional factor of its acceleration and the measured angle.
 
 ---
+
 
 ## PID controller
 
