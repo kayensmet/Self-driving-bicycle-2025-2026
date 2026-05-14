@@ -21,6 +21,8 @@ Before activating the bike, ensure your controller is in the following safe base
     *   *Left Button:* Buzzer (indicates that the bike is on).
     *   *Middle Button:* Balancer activation (see next step).
     *   *Right Button:* Originally intended for the safety PCB/relay (currently not implemented as the relay did not function properly).
+ 
+![Controller front view](controller.jpg) <sub>*Figure 1: Controller*</sub>
 
 ## 3. Activation & Safety Rules
 
