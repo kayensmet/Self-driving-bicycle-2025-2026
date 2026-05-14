@@ -29,7 +29,7 @@ The goal is a bicycle that stays upright and moves **without any physical human 
 
 The first approach was a **flywheel mounted on the bike frame** (idea originated from: [Youtube Video](https://www.youtube.com/watch?v=2Z67NkvXIF4). The idea: spinning a heavy disc and varying its speed creates a gyroscopic reaction torque that counteracts the bike's lean angle.
 
-After detailed calculations (see presentation, slides 10–12), both a solid disc and a hollow ring configuration were evaluated across three tilt scenarios (5°, 10°, 15°). **Both configurations failed** — the required angular accelerations were physically unachievable with any reasonably priced motor, and the exotic actuators that could deliver the torque were far too expensive.
+After detailed calculations (see presentation, slides 10–12), both a solid disc and a hollow ring configuration were evaluated across three tilt scenarios (5°, 10°, 15°) with different centers of gravity. **Both configurations failed** the required angular accelerations were physically unachievable with any reasonably priced motor, and the exotic actuators that could deliver the torque weren't fast enough and super expensive for a prototype bicycle.
 
 ---
 
