@@ -8,7 +8,7 @@
 
 ## What is this project?
 
-The goal of this project was to build a **fully autonomous self-driving bicycle** — a real bike that can balance, drive, and steer itself without any physical human assistance. Two independent groups each built their own version of the bike and worked together on the shared balance system.
+The goal of this project was to build a **fully autonomous self-driving bicycle** a real bike that can balance, drive, and steer itself without any physical human assistance. Two independent groups each built their own version of the bike and worked together on the shared balance system.
 
 ---
 
@@ -18,7 +18,7 @@ The goal of this project was to build a **fully autonomous self-driving bicycle*
 Keeping a bicycle upright without a rider is a classic control engineering problem. Both groups collaborated on this and went through two major approaches:
 
 - **Plan A (Flywheel):** A spinning disc on the frame generating gyroscopic torque to counteract lean. Rejected after calculations showed the required motor speeds were physically unachievable at a reasonable cost.
-- **Plan B (Drone motors) ✅:** Two BLDC drone motors with propellers mounted on a rod in the seat post. By varying thrust on each side, a corrective lateral force is generated. This worked.
+- **Plan B (Drone motors):** Two BLDC drone motors with propellers mounted on a rod in the seat post. By varying thrust on each side, a corrective lateral force is generated. This worked.
 
 Two control strategies were tested:
 - **PID controller** — briefly stable but failed due to motor inertia and derivative noise.
@@ -76,10 +76,6 @@ src/           ← all source code
   drive/       ← motor controller integration
 assets/        ← presentation, datasheets
 ```
-
-The full final presentation (in Dutch) with all calculations and detailed slides is available in `docs/assets/FinalIB3.pdf`.  
-Heavy files (CAD models, videos, raw sensor data) are stored externally: [Google Drive](https://drive.google.com/your-link-here) *(update this link)*
-
 ---
 
 *IB3 — KU Leuven Campus Gent — Academic year 2025–2026*
