@@ -65,7 +65,7 @@ We initially tested a dual MPU6050 setup out of curiosity, as we were facing cha
 ---
 
 
-## PID controller
+## PID 
 
 A classic PID controller was the first control strategy attempted. The IMU reads the lean angle, the PID computes a correction, and the output is mapped to motor throttle via DSHOT.
 
@@ -75,9 +75,11 @@ It showed **brief moments of stability** but ultimately failed due to:
 
 The PID source code can be found in `src/balance/pid/`.
 
+![PID demo](pid_demo.gif) <sub>*Gif 1: Best result of PID, few oscillations but eventually turns into positive feedback*</sub>
+
 ---
 
-## LQR controller
+## LQR 
 
 After PID proved insufficient, an **LQR (Linear Quadratic Regulator)** was implemented using the `AutoLQR` library. This was the final and best-performing control strategy. [(Library)](https://github.com/lily-osp/AutoLQR)
 
