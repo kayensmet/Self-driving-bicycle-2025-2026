@@ -11,7 +11,7 @@ Each section below has its own page explaining the approach, what worked, what d
 | [Balance](balance/index.md) | Drone motor system, PID, LQR controller |
 | [Steering](steering/index.md) | Servo control, gear/chain drive |
 | [Drive](drive/index.md) | Hub motor, motor controller, throttle|
-| [Drive](communication/index.md) | ESP-NOW, MQTT, controller |
+| [Communication](communication/index.md) | ESP-NOW, MQTT, controller |
 
 ### Source code
 All code is organized in the `src/` folder at the root of this repository:
