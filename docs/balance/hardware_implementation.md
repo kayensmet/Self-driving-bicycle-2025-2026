@@ -5,11 +5,11 @@
 The balance system is built around a compact, modular board mounted on the bicycle frame. It houses the ESP32 microcontroller, two IMUs, and the signal/power headers for the ESCs and motors.
 The board can be physically removed as a unit. As long as the wiring harness is connected correctly, no changes to the board itself should be necessary.
 
-![PCB overzicht](assets/hardware_pcb.jpg)
-
 ---
 
 ## PCB Layout
+
+![Perfboard overzicht](hardware_implementation.png)
 
 The board is a perfboard with the following components mounted on pin headers (making them swappable if needed):
 
@@ -56,7 +56,6 @@ Motor signals are sent from the ESP32 to the ESCs using **DSHOT** (digital proto
 
 Each signal wire is paired with a GND wire (black). These are connected via the male pin headers on the board.
 
-> ⚠️ The black wires are always GND. Do not swap signal and GND — this will damage the ESCs.
 
 ---
 
