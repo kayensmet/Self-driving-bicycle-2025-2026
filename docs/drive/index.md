@@ -75,6 +75,6 @@ To enable reverse driving, additional hardware is required which has not yet bee
 
 For future iterations, it is strongly recommended to use **torque arms** to prevent axle spin.
 
-![Torque Arm](../assets/drive/TorqueArm.png)
+![Torque Arm](../drive/TorqueArm.png)
 
 *Figure 4 — Torque arm*
