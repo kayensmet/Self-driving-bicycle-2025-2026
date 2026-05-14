@@ -1,4 +1,6 @@
-# IB3 Self-Driving Bicycle — Project Summary 2025–2026
+# IB3 Self-Driving Bicycle — Project Summary 2025–2026: Summary of FINALIB3.PDF!
+
+
 
 **KU Leuven Campus Gent**  
 **Group 1:** Robin, Quinten, Maxime, Lars, Noah, Lee  
