@@ -30,7 +30,7 @@ All code is organized in the `src/` folder at the root of this repository:
 
 If you are a new team member picking this up next year:
 
-1. Read the [project summary](summary.md) first for a full picture
+1. Read the [project summary](assets/summary.md) first for a full picture
 2. Browse the section pages above for the details of each subsystem
 3. Find the relevant source code in `src/`
 4. Check the "What's missing" section on each page, and (hopefully) improve!
