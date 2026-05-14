@@ -21,13 +21,13 @@ For full calculations, slides, and detailed comparisons, refer to the [final pre
 
 ## Problem statement
 
-The goal is a bicycle that stays upright and moves **without any physical human assistance**. The balance system is responsible for keeping the bike from falling over at all times — whether stationary or in motion.
+The goal is a bicycle that stays upright and moves **without any physical human assistance**. The balance system is responsible for keeping the bike from falling over at all times, whether stationary or in motion.
 
 ---
 
 ## Plan A — Flywheel
 
-The first approach was a **flywheel mounted on the bike frame**. The idea: spinning a heavy disc and varying its speed creates a gyroscopic reaction torque that counteracts the bike's lean angle.
+The first approach was a **flywheel mounted on the bike frame** (idea originated from: [Link Text](https://www.youtube.com/watch?v=2Z67NkvXIF4). The idea: spinning a heavy disc and varying its speed creates a gyroscopic reaction torque that counteracts the bike's lean angle.
 
 After detailed calculations (see presentation, slides 10–12), both a solid disc and a hollow ring configuration were evaluated across three tilt scenarios (5°, 10°, 15°). **Both configurations failed** — the required angular accelerations were physically unachievable with any reasonably priced motor, and the exotic actuators that could deliver the torque were far too expensive.
 
