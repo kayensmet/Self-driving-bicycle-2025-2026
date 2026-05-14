@@ -68,16 +68,4 @@ The front wheel steering was actuated by a servo motor.
 
 ---
 
-## Repository structure
-
-```
-docs/          ← this website (GitHub Pages)
-src/           ← all source code
-  balance/     ← PID, LQR, dashboard
-  steering/    ← servo control
-  drive/       ← motor controller integration
-assets/        ← presentation, datasheets
-```
----
-
 *IB3 — KU Leuven Campus Gent — Academic year 2025–2026*
