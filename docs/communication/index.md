@@ -14,9 +14,10 @@ The remote controller contains:
 - TFT display
 - ESP32
 
-*(see figure)*
-
 The remote communicates with all ESP32 modules in the system using **ESP-NOW**.
+
+![Controller](controller.jpg) <sub> *Figure 1: Controller* </sub>
+
 
 ---
 
@@ -149,4 +150,4 @@ This functionality is currently only implemented on the remote controller side a
 # Total communication diagram of the bicycle
 This is a complete diagram of how the bike communicates and is built, it shows voltage lines, communication between the controller and the different PCB's of our system. 
 
-![Block-diagram-bicycle](diagram-communication.png) <sub> *Figure 1: Block diagram of bicycle communication* </sub> 
+![Block-diagram-bicycle](diagram-communication.png) <sub> *Figure 2: Block diagram of bicycle communication* </sub> 
