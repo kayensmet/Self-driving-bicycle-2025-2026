@@ -3,6 +3,7 @@
 
 Before operating the self-driving bicycle, please follow this exact sequence to ensure all systems are powered correctly and safely.
 
+
 ## 1. Powering the Hardware
 
 *   **Main Battery (Drive System):** First, check if the main battery is on. You can find it under the white wingflaps. Look for the **red button**, which indicates the on/off state. This provides power to the wheel and the drive board (with the ESP).
@@ -26,6 +27,9 @@ Before activating the bike, ensure your controller is in the following safe base
 
 ## 3. Activation & Safety Rules
 
-*   **Environment:** Ensure the bike is in a safe, open, and controlled area before turning anything on.
+*   **Environment:** Ensure the bike is in a safe, open, and controlled area before turning anything on. Make sure the weather conditions are suitable, we never tested our final design in HEAVY winds nor do we logically recommend using this in the rain..
 *   **Starting Position:** The bike is capable of starting up by itself directly from its stand. **Do not** attempt to start the balancing system from an angle lower than the stand's natural resting point. This has not been tested and is highly discouraged.
 *   **Activation:** Once all checks are complete and the area is clear, push the **middle button** on the top right of the controller **UP** to activate the balancing system!
+## 4. Turn off
+*   Make sure somebody is standing close to the bike at all times, to turn off the balancing push the middle button down (make sure somebody can catch the bike). Currently it has no automatic return to its stander. 
+*   Disconnect all batteries.
