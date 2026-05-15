@@ -1,7 +1,7 @@
 # Steering System — IB3 Self-Driving Bicycle 2025–2026
 
 **Team:** Group 1 (Robin, Quinten, Maxime, Lars, Noah, Lee) & Group 2 (Milan, Kayen, Thibaut, Toon, Simon V, Simon VK)  
-**Note:** Both groups took a different route on the steering system. We will try to separate them out as much as possible.
+**Note:** Both groups took a different route on the steering system. We will try to separate them out as much as possible. **The final product delivered here is GROUP 2's bicycle**, but we still want to share all the information we gathered.
 
 For full slides, and detailed comparisons, refer to the [final presentation (PDF)](../assets/FinalIB3.pdf).
 
