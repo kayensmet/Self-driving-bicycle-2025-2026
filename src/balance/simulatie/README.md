@@ -60,3 +60,9 @@ The application visualizes:
 - Overshoot
 
 ---
+
+# Simulation demo
+You can see the angle of the pendulum. The output for the two motors. P, I and D values.
+
+![Simulatie voorbeeld](sim_voorbeeld.gif)
+
