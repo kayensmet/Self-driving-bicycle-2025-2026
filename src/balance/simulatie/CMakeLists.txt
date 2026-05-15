@@ -28,6 +28,7 @@ target_link_libraries(imgui_pid
         d3d11
         dxgi
         dwmapi
+        d3dcompiler
 )
 
 enable_language(RC)
