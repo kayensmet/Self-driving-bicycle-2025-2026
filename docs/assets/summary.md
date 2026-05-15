@@ -59,7 +59,7 @@ The front wheel steering was actuated by a servo motor.
 
 ## What's still missing
 
-- **Cornering:** the balance and steering systems are not yet coupled — the bike doesn't lean into corners
+- **Cornering:** the balance and steering systems are not yet coupled, the bike doesn't lean into corners
 - **Autonomy:** currently fully remote-controlled, no object detection or path planning
 - **Low-speed balance:** the bike struggles to stay upright at very low speeds or when stationary
 - **Gain scheduling:** LQR gains are fixed regardless of speed; Hall sensor data could enable speed-dependent tuning
