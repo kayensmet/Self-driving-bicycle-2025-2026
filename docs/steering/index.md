@@ -1,3 +1,14 @@
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  }
+};
+</script>
+
+<script defer
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
 # Steering System — IB3 Self-Driving Bicycle 2025–2026
 
 **Team:** Group 1 (Robin, Quinten, Maxime, Lars, Noah, Lee) & Group 2 (Milan, Kayen, Thibaut, Toon, Simon V, Simon VK)  
