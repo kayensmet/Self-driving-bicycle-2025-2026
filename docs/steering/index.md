@@ -38,13 +38,13 @@ The goal is a bicycle that stays upright and moves without any physical human as
 
 A portable luggage scale was used to pull on the steering wheel of the bike, to find the maximum pull strength required to move the steering wheel. Expirementally was found that a force of $F = 19,62 N (= 2 kg)$ at a distance of $30 cm$ was required to move the steering wheel. Using the moment's law of static mechanics:
 
-$$M_{N}= F \cdot r = 19,6 N \cdot 0,3 m= 5,88 Nm \approx 60 kg \cdot cm$$
+$$M_{N}= F \cdot r \cdot sin(\alpha) = 19,6 N \cdot 0,3 m \cdot sin(90\circ)= 5,88 \cdot 1 Nm \approx 60 kg \cdot cm$$
 
 There's a handy [convertor tool online](https://lucidar.me/en/unit-converter/convert-torque-in-n-m-to-kg-cm/) to help convert Nm to kg cm. A lot of (servo) motors online will list their torque as kg cm. 
 
 Group 1 took a 300% safety margin into account and used a moment's force of:
 
-$$M_{N}= 3 \cdot F \cdot r = 3\cdot  19,6 N \cdot 0,3 m= 5,88 Nm \approx 180 kg \cdot cm$$
+$$M_{N}= 3 \cdot F \cdot r \cdot sin(\alpha) = 3\cdot  19,6 N \cdot 0,3 m \cdot 1= 5,88 Nm \approx 180 kg \cdot cm$$
 
 ---
 
@@ -70,25 +70,21 @@ This chain performed much better than the belt, because it couldn't slip as easi
 - installing and adjusting is a cumbersome process: screws involved.
 
 
-For hardware details (Perfboard layout, IMU wiring, ESC connections, bill of materials), see [Hardware Implementation](hardware_implementation.md).
+For hardware details (servo PCB, wiring), see [Hardware Implementation](hardware_implementation.md).
 
 ---
 
 
 
 ## Plan Direct Drive (group 1)
-Group 1 put all their eggs, hopes and dreams on 1 solution: direct drive using selfmade gears. They tried 3d printing them, but that ended up not being strong enough. They tried lasercutting, but again, they were defeated by the much too strong moment's force of their chunky servo motor. At last, they finally used a very thick lasercut gear in combination with a 3d printed gear to finally overcome the crushing power of their own (badly chosen) motor. 
+Group 1 put all their eggs, hopes and dreams in 1 basket: direct drive using selfmade gears. They tried 3d printing them, but that ended up not being strong enough. They tried lasercutting, but again, they were defeated by the much too strong moment's force of their chunky servo motor. At last, they finally used a very thick lasercut gear in combination with a 3d printed gear to finally overcome the crushing power of their own (badly chosen) motor. 
 ### How it works
-
-### Tuning parameters
-
-
-### Final settings (Group 2)
+The servo shaft is connected to a gear, which is then connected to another gear which is connected on the steering axle. When servo turns clockwise, the steer will move counterclockwise and vice versa.
 
 
 
 ### Result
-
+ToDo: images?
 
 
 ---
