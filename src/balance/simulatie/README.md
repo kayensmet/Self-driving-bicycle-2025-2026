@@ -1,6 +1,17 @@
 # Inverted Pendulum PID Simulation
 
-Real-time inverted pendulum simulator built with C++, Dear ImGui and DirectX11.
+- Clone and open the project in CLion.
+- Real-time inverted pendulum simulator built with C++, Dear ImGui and DirectX11.
+
+
+## Requirements
+- Windows 10/11
+- CLion (with CMake support)
+- Visual Studio Build Tools (MSVC)
+- DirectX 11 SDK (included in Windows SDK)
+
+## Build
+Open the project in CLion and let CMake configure automatically, then build and run.
 
 ## Features
 
@@ -11,9 +22,9 @@ Real-time inverted pendulum simulator built with C++, Dear ImGui and DirectX11.
   - P term
   - I term
   - D term
-  - Total PID output
+  - Motor 1 and 2 output
   - Pendulum angle
-  - Angular velocity
+
 
 ---
 
