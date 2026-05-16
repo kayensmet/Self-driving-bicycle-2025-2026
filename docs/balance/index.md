@@ -46,7 +46,8 @@ The second approach uses two BLDC drone motors mounted on a rod in the seat post
 - Non-linear relationship between motor RPM and thrust (fluid dynamics)
 - Safety risk from spinning propellers: protective cage has been 3D-printed around them (see presentation)
 
-**Dimensioning result:** at 32 kg total bike mass, a center of gravity at 0.75 m, and a maximum tilt of 10°, each motor needs to deliver approximately 1.4 kg equivalent thrust. Full calculations are in the presentation (slides 19).
+**Dimensioning result:** at 32 kg total bike mass, a center of gravity at 0.75 m, and a maximum tilt of 10°, each motor needs to deliver approximately 2.8 kg equivalent thrust. Full calculations are in the presentation (slides 19).
+<img width="401" height="354" alt="image" src="https://github.com/user-attachments/assets/36768656-29ea-464d-ad3c-940e138d2fcc" />
 
 
 For hardware details (Perfboard layout, IMU wiring, ESC connections, bill of materials), see [Hardware Implementation](hardware_implementation.md).
@@ -60,7 +61,7 @@ Two setups were tested:
 - Averaging two MPU6050s: σ = 0.161° :usable but noisy
 - Kalman filter: σ = 0.020° :much cleaner but introduced too much delay
 
-We initially tested a dual MPU6050 setup out of curiosity, as we were facing challenges with our PID tuning. During these exploratory tests, we did not implement averaging or Kalman filtering. Ultimately, we opted for a simpler approach: using a single MPU6050 alongside a basic complementary filter that combined a proportional factor of its acceleration and the measured angle.
+We initially tested a dual MPU6050 setup out of curiosity, as we were facing challenges with our PID tuning. During these exploratory tests, we did not implement averaging or Kalman filtering. Ultimately, we opted for a simpler approach: using a single MPU6050 alongside a basic complementary filter that combined a proportional factor of its acceleration and the measured angle (This is to correct sensor drift). It should be noted that averaging of 2 IMU would still give a better measurement accuracy and it was not used here since we didn't need the extra accuracy.
 
 ---
 
@@ -129,7 +130,8 @@ These are the open problems specifically for the balance system that the next te
 
 **Cornering stability**  
 When the bike turns, the center of gravity needs to shift inward to correctly take a corner, just like a person would take the apex. Currently there is no coupling between the balance system and the steering system. A proper implementation would have the balance controller intentionally tilt the bike during a turn, taking the apex smoothly rather than fighting to stay upright against the centrifugal force.
-This could be done by making the control loop way more stable, more accurate (use both IMU's, use RPM feedback with telemetry of ESC's --> currently not in use)
+This could be done by making the control loop way more stable, more accurate (use both IMU's, use RPM feedback with telemetry of ESC's --> currently not in use).
+More literature about this and other bicycle fysics can be found in the following book: https://books.google.be/books?id=0JJo6DlF9iMC&printsec=frontcover#v=onepage&q&f=false. Alternatively there is a youtube video explain exactly this issue: https://www.youtube.com/watch?v=9cNmUNHSBac
 
 **Gain scheduled LQR**  
 The current LQR uses fixed gains regardless of riding speed. At higher speeds the bike's dynamics change significantly. it becomes more self-stable and needs less aggressive correction. Wheel speed data from the Hall sensors (already available on the hardware) could be used to schedule different K values depending on velocity.
@@ -137,6 +139,7 @@ The current LQR uses fixed gains regardless of riding speed. At higher speeds th
 **Obstacle avoidance integration**  
 Currently the bike has no autonomy and is fully remote-controlled. Future work could let the balance system lean the bike slightly sideways to dodge obstacles at an angle similar to how a cyclist swerves, rather than relying only on steering or hard braking.
 
-
+**Accurate Homing and/or Calibration**
+A Homing procedure should be examined so a very precise target angle could be set. The current angle is our best iterative measurement but ideally you'd use a homing procedure and have a calibration(offset) so the exact target angle could simply be set to 0.
 
 *IB3 — KU Leuven Campus Gent — 2025–2026*
