@@ -33,7 +33,7 @@ The Fusion 360 design files for these cages can be found under `src/balance/3D_f
 
 The cages were designed to fully enclose the drone propellers while maintaining sufficient airflow. Each motor is mounted to the cage using eight M3 bolts, while four larger M6 bolts are used to clamp the assembly securely around the bicycle frame or mounting pole. To manufacture the curved plexiglass sections, a custom mold was designed and used during the bending process.
 
-![Molds](molds.png) <sub>*Figure 1: Plexi mold*</sub>
+![Molds](Molds.png) <sub>*Figure 1: Plexi mold*</sub>
 
 The final design provides a rigid and safe solution for mounting the powerful drone motors used to balance the bicycle.
 
