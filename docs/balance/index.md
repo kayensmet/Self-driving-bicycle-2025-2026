@@ -122,6 +122,13 @@ The LQR controller achieved **stable balancing**: lean angle held within ±1° o
 All LQR source code and tuning files are in `src/balance/lqr/`.  
 The live tuning dashboad is hosted by the ESP32 itself, after tuning it was taken off to take advantage of pure mathematical performance of the esp responsible for balancing the bicycle. 
 
+The final code used on the balance ESP32 can be found under `src/balance/lqr_espNOW_final`
+In the top of the file all LQR and other parameters can still be tuned(beware these parameters have to be tuned to your bike)
+This code also uses multiple libraries of which
+
+- the autoLQR lib by azzar budiyanto (https://github.com/lily-osp/AutoLQR)
+- the DshotRMT lib by Wastl Kraus version 0.9.5
+
 ---
 
 ## What's missing for next year

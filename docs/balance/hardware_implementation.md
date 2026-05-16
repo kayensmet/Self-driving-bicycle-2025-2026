@@ -19,6 +19,25 @@ Components mounted on the bicycle:
 | LiPo — Dogcom 21700 20000mAh 6S4P | [droneshop.nl](https://droneshop.nl/dogcom-21700-20000mah-6s4p-22-2v-lion-xt90) | 1 | €149,00 | €149,00 |
 | **Total** | | | | **€370,65** |
 
+## Protection cage
+
+A protective cage was mounted around the drone propellers to improve both safety and mechanical protection. The cage prevents accidental contact with the spinning propellers during testing and operation, reducing the risk of injury.
+
+In addition, the cage helps protect the motors and propellers from external impacts such as falls, collisions, or debris while riding the bicycle. This is especially important because the motors are mounted externally on the frame and are therefore exposed during operation.
+
+The cage was designed to be lightweight while still rigid enough to withstand minor impacts without interfering with airflow to the propellers.
+
+The Fusion 360 design files for these cages can be found under `src/balance/3D_files`. The cages were designed to fit around multiple different pole diameters. A dedicated protective enclosure for the ESCs was also designed and can be found in the same directory.
+
+![Balance cage](Balance_cage.png) <sub>*Figure 1: Fusion design of cage*</sub>
+
+The cages were designed to fully enclose the drone propellers while maintaining sufficient airflow. Each motor is mounted to the cage using eight M3 bolts, while four larger M6 bolts are used to clamp the assembly securely around the bicycle frame or mounting pole. To manufacture the curved plexiglass sections, a custom mold was designed and used during the bending process.
+
+![Molds](molds.png) <sub>*Figure 1: Plexi mold*</sub>
+
+The final design provides a rigid and safe solution for mounting the powerful drone motors used to balance the bicycle.
+
+![Cage](cage_final.png) <sub>*Figure 1: completed cage*</sub>
 
 ## Perfboard Layout
 
