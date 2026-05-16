@@ -79,7 +79,7 @@ For hardware details (servo PCB, wiring), see [Hardware Implementation](hardware
 ## Plan Direct Drive (group 1)
 Group 1 put all their eggs, hopes and dreams in 1 basket: direct drive using selfmade gears. They tried 3d printing them, but that ended up not being strong enough. They tried lasercutting, but again, they were defeated by the much too strong moment's force of their chunky servo motor. At last, they finally used a very thick lasercut gear in combination with a 3d printed gear to finally overcome the crushing power of their own (badly chosen) motor. 
 ### How it works
-The servo shaft is connected to a gear, which is then connected to another gear which is connected on the steering axle. When servo turns clockwise, the steer will move counterclockwise and vice versa.
+The servo shaft is connected to a gear, which is then connected to another gear which is connected on the steering axle. When servo turns clockwise, the steer will move counterclockwise and vice versa. 
 
 
 
@@ -89,5 +89,8 @@ ToDo: images?
 
 ---
 
+## Possible best solution (not implemented)
+Near the end of the project we stumbled apon possibly the best solution. This solution is called a Capstan Drive. This is a bit of a niche which is why we mention it here. The benefit of this design lies mostly in the fact that it inherently has no backlash which is the biggest issue to remain in the steering setups of both teams. It is also Very 3d print friendly and uses rope which is cheap. For more information check out the following site: https://www.aaedmusa.com/projects/capstandrive.
 
+---
 *IB3 — KU Leuven Campus Gent — 2025–2026*
