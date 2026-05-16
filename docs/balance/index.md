@@ -135,7 +135,7 @@ This could be done by making the control loop way more stable, more accurate (us
 The current LQR uses fixed gains regardless of riding speed. At higher speeds the bike's dynamics change significantly. it becomes more self-stable and needs less aggressive correction. Wheel speed data from the Hall sensors (already available on the hardware) could be used to schedule different K values depending on velocity.
 
 **Obstacle avoidance integration**  
-Currently the bike has no autonomy and is fully remote-controlled. Future work could let the balance system lean the bike slightly sideways to dodge obstacles at an angle — similar to how a cyclist swerves, rather than relying only on steering or hard braking.
+Currently the bike has no autonomy and is fully remote-controlled. Future work could let the balance system lean the bike slightly sideways to dodge obstacles at an angle similar to how a cyclist swerves, rather than relying only on steering or hard braking.
 
 
 
