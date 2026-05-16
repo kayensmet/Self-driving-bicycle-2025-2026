@@ -62,6 +62,7 @@ Both IMUs are connected to the ESP32 over the same I²C bus. To avoid address co
 
 
 Motor signals are sent from the ESP32 to the ESCs using **DSHOT** (digital protocol, no calibration needed, no analog noise). (DSHOT library!)
+
 | GPIO | Signal | ESC / Motor |
 |---|---|---|
 | GPIO 18 | DSHOT | ESC 1 |
