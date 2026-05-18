@@ -44,7 +44,7 @@ The front wheel steering was actuated by a servo motor.
 ---
 
 ## Communication
-- **Group 1** Used a PS5 as controller, ESP-NOW communcation, and a Node-RED dashboard see more at [Communication group 1](../../src/communication/group1/README.md).
+- **Group 1** Used a PS5 controller, ESP-NOW communication, and a Node-RED dashboard. See more at [Communication group 1](https://github.com/kayensmet/Self-driving-bicycle-2025-2026/blob/main/src/communication/group1/README.md).
 - **Group 2** built a custom physical controller (ESP32, linear slider potentiometers, TFT screen, buzzer) communicating via ESP-NOW with a heartbeat safety signal.
 
 ---
