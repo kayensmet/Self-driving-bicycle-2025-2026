@@ -101,6 +101,7 @@ Run a broker (e.g. Mosquitto) on a local server (e.g. pi) and connect Node-RED t
 - Any other sensor on the bicycle (hall sensor, ...)
 
 The goal: monitor and eventually fully control the bicycle remotely from a dashboard.
+![dashboard](dashboard.gif)
 
 ---
 
