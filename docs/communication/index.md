@@ -16,7 +16,7 @@ The remote controller contains:
 
 The remote communicates with all ESP32 modules in the system using **ESP-NOW**.
 
-![Controller](controller.jpg) <sub> *Figure 1: Controller* </sub>
+![Controller](controller1.jpg) <sub> *Figure 1: Controller* </sub>
 
 
 ---
@@ -139,6 +139,8 @@ The display also indicates whether the balance system is:
 
 # Emergency Stop Screen
 
+![Controller](controller2.jpg) <sub> *Figure 2: Controller Emergency Stop Screen* </sub>
+
 When the emergency stop switch is activated, a separate warning screen appears indicating that the emergency stop has been triggered.
 
 While this screen is active:
@@ -150,7 +152,7 @@ This functionality is currently only implemented on the remote controller side a
 # Total communication diagram of the bicycle
 This is a complete diagram of how the bike communicates and is built, it shows voltage lines, communication between the controller and the different PCB's of our system. 
 
-![Block-diagram-bicycle](diagram-communication.png) <sub> *Figure 2: Block diagram of bicycle communication* </sub> 
+![Block-diagram-bicycle](diagram-communication.png) <sub> *Figure 3: Block diagram of bicycle communication* </sub> 
 
 # Communication Architecture — ESP-NOW Bike Controller
  
