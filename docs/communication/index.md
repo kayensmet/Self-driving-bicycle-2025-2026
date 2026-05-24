@@ -226,7 +226,7 @@ typedef struct struct_message {
 } struct_message;
 ```
  
-> ⚠️ `Servo.cpp` uses a slightly shorter version of this struct (without `buzzer` and `balansAan`). Take care when comparing struct sizes across nodes.
+> Note: `Servo.cpp` uses a shorter version of this struct (without `buzzer` and `balansAan`). Take care when comparing struct sizes across nodes.
  
 ### Command Codes
  
